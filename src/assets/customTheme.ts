@@ -20,5 +20,11 @@ export const customTheme = createTheme({
         ff: "Alegreya Sans",
       },
     },
+    Pill: {
+      defaultProps: {
+        bg: "rgba(102, 83, 162, 0.5)",
+        c: "textB",
+      },
+    },
   },
 });
