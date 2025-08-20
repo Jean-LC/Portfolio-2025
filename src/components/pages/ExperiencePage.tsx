@@ -6,8 +6,14 @@ const ExperiencePage = () => {
   const { languageSelected } = usePortfolioStore();
 
   return (
-    <Flex h={"100%"} w={"100%"} align={"center"} p={10}>
-      <Stack w={"50%"}>
+    <Flex
+      h={"100%"}
+      w={"100%"}
+      align={"center"}
+      p={{ base: 0, md: 10 }}
+      direction={{ base: "column", md: "row" }}
+    >
+      <Stack w={{ base: "100%", md: "50%" }} visibleFrom="md">
         <Text c={"primary"} fw={800}>
           {resources[
             languageSelected
@@ -23,7 +29,7 @@ const ExperiencePage = () => {
           )}
         </Flex>
       </Stack>
-      <Stack w={"50%"} gap={30}>
+      <Stack w={{ base: "100%", md: "50%" }} gap={0}>
         <Text c={"primary"} fw={800}>
           {resources[
             languageSelected
@@ -31,13 +37,27 @@ const ExperiencePage = () => {
         </Text>
         {resources[languageSelected].workHistory.jobHistory.jobData.map(
           (job, i) => (
-            <Flex key={i} direction={"row"} w={"100%"}>
-              <Text fz={13} w={"25%"}>
+            <Flex
+              key={i}
+              direction={{ base: "column", md: "row" }}
+              w={"100%"}
+              mb={{ base: 20, md: 30 }}
+            >
+              <Text
+                fz={{ base: ".8rem", md: "inherit" }}
+                w={{ base: "100%", md: "25%" }}
+              >
                 {job.years}
               </Text>
-              <Stack ml={"10%"} gap={0} w={'75%'}>
+              <Stack
+                ml={{ base: 0, md: "10%" }}
+                gap={0}
+                w={{ base: "100%", md: "75%" }}
+              >
                 <Text fw={500}>{job.company}</Text>
-                <Text fz={14}>{job.description}</Text>
+                <Text fz={{ base: ".8rem", md: "inherit" }}>
+                  {job.description}
+                </Text>
                 <Flex wrap={"wrap"} gap={5}>
                   {job.skills.map((skillJob, i) => (
                     <Pill key={skillJob + i}>{skillJob}</Pill>

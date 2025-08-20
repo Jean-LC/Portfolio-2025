@@ -9,9 +9,6 @@ import ExperiencePage from "./ExperiencePage";
 const MainPage = () => {
   const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);
 
-  // const handleNext = () => embla?.scrollNext();
-  // const handlePrev = () => embla?.scrollPrev();
-
   const handleWheel = (event: any) => {
     // Scroll hacia abajo
     if (event.deltaY > 0) {

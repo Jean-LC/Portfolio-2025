@@ -97,7 +97,7 @@ export const resources: IResourcesData = {
             position: "Front-End Developer Student",
             years: "July 2022-December - 2022",
             description:
-              "In just one month, I learned React to develop Suchito, an interface for a restaurant that enables creating, editing, and deleting users and products through HTTP requests, working with databases and a mock API. I also built MDLinks, a CLI tool in Node.js that searches for links within directories and Markdown files, which strengthened my skills with objects, JSON handling, and Node.js modules. Additionally, I explored the basics of JavaScript, HTML, and CSS to create Cipher, a web page that allows users to encode and decode messages using the Caesar Cipher, reinforcing my foundational web development knowledge.",
+              "I rapidly learned the fundamentals of JavaScript and React. I applied them in several projects, including a command-line tool and a restaurant interface that performs CRUD operations through HTTP requests.",
             skills: [
               "ReactJs",
               "JavaScript ES6",
@@ -114,7 +114,7 @@ export const resources: IResourcesData = {
   },
   es: {
     presentation: {
-      title: "Hola, soy Jeanette!",
+      title: "¡Hola, soy Jeanette!",
       description:
         "Construyo páginas web centradas en la experiencia del usuario, responsivas y con código eficiente",
       extraText: "¿Trabajamos juntos?",
@@ -208,7 +208,7 @@ export const resources: IResourcesData = {
             position: "Estudiante Desarrollo Web",
             years: "Julio 2022 - Diciembre - 2022",
             description:
-              "En tan solo un mes, aprendí React para desarrollar Suchito, una interfaz para un restaurante que permite crear, editar y eliminar usuarios y productos mediante solicitudes HTTP, trabajando con bases de datos y una API simulada. También construí MDLinks, una herramienta de línea de comandos en Node.js que busca enlaces dentro de directorios y archivos Markdown, lo que fortaleció mis habilidades con objetos, manejo de JSON y módulos de Node.js. Además, exploré los fundamentos de JavaScript, HTML y CSS para crear Cipher, una página web que permite a los usuarios codificar y decodificar mensajes usando el Cifrado César, reforzando mis conocimientos básicos en desarrollo web.",
+              "Aprendí las bases de JavaScript y React en poco tiempo. Las apliqué en varios proyectos, entre ellos una herramienta de línea de comandos y una interfaz para un restaurante que realiza operaciones CRUD mediante solicitudes HTTP.",
             skills: [
               "ReactJs",
               "JavaScript ES6",

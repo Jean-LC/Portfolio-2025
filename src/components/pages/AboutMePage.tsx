@@ -1,4 +1,4 @@
-import { Flex, Stack, Text } from "@mantine/core";
+import { Flex, Stack, Text, Title } from "@mantine/core";
 import { resources } from "../../assets/dataTranslations";
 import { usePortfolioStore } from "../../store/PortFolioStore";
 
@@ -6,22 +6,35 @@ const AboutMePage = () => {
   const { languageSelected } = usePortfolioStore();
 
   return (
-    <Flex h={"100%"} w={"100%"} align={"center"} p={10}>
-      <Stack w={"50%"}>
-        <Text fz={{ base: 12, sm: 17 }} maw={400}>
+    <Flex
+      h={"100%"}
+      w={"100%"}
+      align={"center"}
+      p={10}
+      direction={{ base: "column", md: "row" }}
+    >
+      <Title order={2} hiddenFrom="md" mb={20}>
+        {languageSelected === "en" ? "About me" : "Acerca de mí"}
+      </Title>
+      <Stack w={{ base: "100%", md: "50%" }} mb={{ base: 30, md: 0 }}>
+        <Text maw={400} ta={{ base: "center", md: "left" }}>
           {resources[languageSelected].aboutMe.aboutText}
         </Text>
       </Stack>
-      <Stack w={"50%"} ml={"10%"}>
+      <Stack w={{ base: "100%", md: "50%" }} ml={"10%"}>
         <Text c={"primary"} fw={800}>
           {resources[
             languageSelected
           ].aboutMe.education.title.toLocaleUpperCase()}
         </Text>
-        <Stack>
+        <Stack mb={{ base: 30, md: 20 }}>
           {resources[languageSelected].aboutMe.education.academicHistory.map(
             (val, i) => (
-              <Flex w={"100%"} key={i}>
+              <Flex
+                w={"100%"}
+                key={i}
+                direction={{ base: "column", md: "row" }}
+              >
                 <Text w={"25%"} c={"rgba(183, 174, 214, 0.8)"}>
                   {val.years}
                 </Text>
@@ -42,7 +55,10 @@ const AboutMePage = () => {
           {resources[languageSelected].aboutMe.languages.languageSkills.map(
             (val, i) => (
               <Flex w={"100%"} key={i}>
-                <Text w={"25%"} c={"rgba(183, 174, 214, 0.8)"}>
+                <Text
+                  w={{ base: "50%", md: "25%" }}
+                  c={"rgba(183, 174, 214, 0.8)"}
+                >
                   {val.level}
                 </Text>
 
